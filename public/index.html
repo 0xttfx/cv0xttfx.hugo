@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w2.org/1999/xhtml">
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.121.2">
+            <meta charset="utf-8" />
+    <title>cv0xttfx </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My terminal curriculo">
+    <meta property="og:title" content="cv0xttfx" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://cv0xttfx.tcpip.net.br" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href=""/>
+    <link rel="canonical" href="https://cv0xttfx.tcpip.net.br/" />    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.42.0/js/jquery.terminal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/less.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/autocomplete_menu.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/2.42.0/css/jquery.terminal.min.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+    
+
+    </head>
+        <body>
+        
+<script> 
+jQuery(document).ready(function($) {
+    var animation = false;
+
+    var commands = {
+        help: "shows help",
+        less: "Use less as output method",
+        whois: "list basic details",
+        social: "list social networks",
+        work: "list work experience",
+        education: "list education",
+        skills: "list core skills",
+        softskills: "list soft skills",
+        languages: "list spoken languages",
+        projects: "list projects",
+         
+            certifications: "list certifications",
+        
+        
+            startx: "starts graphical environment",
+        
+        
+            "bitmore": "A little bit more about me",
+        
+        
+        
+            version: "Current version",
+        
+        
+            exit: "exit the terminal",
+        
+        all: "Show all details",
+    };
+
+    function progressBar(number) {
+        var barLength = Math.round(number / 10);
+        var barFilled = Array(barLength + 1).join("&#9611;");
+        var barBlank= Array(11 - barLength).join("&#9617;");
+
+        return barFilled + barBlank
+    }
+
+    
+    function padKey(key, length) {
+        return key + ' '.repeat(length - key.length);
+    }
+
+    function commandsHelp() {
+        let longestKeyLength = Math.max(...Object.keys(commands).map(key => key.length));
+
+        let helpText = ""
+        for (let key in commands) {
+            if (commands.hasOwnProperty(key)) {
+                helpText += ` ${padKey(key, longestKeyLength)}\t${commands[key]}\n`
+            }
+        }
+        return helpText
+    }
+
+    var help = '\n[[b;white;]usage:]\n' +
+                '\n <command> - execute the command\n' +
+                ' less <command> - use less to display the output\n\n' +
+                '\n[[b;white;]Available commands:]\n' + 
+               commandsHelp();
+
+    var whois = [
+     
+        '[[b;grey;]Name:]\t\t\tThiago Torres Faioli\n' + 
+        '[[b;grey;]Profession:]\t\tIT Infrastructure Consultante\n' +
+        '[[b;grey;]Location:]\t\tSomewhere\n' +
+        
+        '[[b;grey;]Email:]\t\t\tthiago@tcpip.net.br\n' +
+        
+        
+        '[[b;grey;]Homepage:]\t\thttps:\/\/0xttfx.tcpip.net.br\n' +
+        
+        
+        'IT infrastructure, sysadmin unix and linux, cloud computing, platform engineer, {S,N}RE, cyber security, geek and hacker culture enthusiast.\n' +
+        
+        '\r',
+    
+    ];
+
+    function social() { 
+        var hideName = false;
+        let sMap = { 
+             
+                
+                "github": "https:\/\/github.com\/0xttfx",
+                
+                "linkedin": "https:\/\/linkedin.com\/in\/thiagofaioli",
+                
+                "X": "https:\/\/twitter.com\/0xttfx",
+                
+                "discord": "https:\/\/discord.gg\/jMztSAgJ",
+                
+                "telegram": "https:\/\/t.me\/0xttfx",
+                
+                "whatsapp": "https:\/\/wa.me\/5531984494065",
+                
+            
+        };
+
+        
+        socialText = []
+        for (let key in sMap) {
+            if (sMap.hasOwnProperty(key)) {
+                if (hideName) {
+                    socialText.push(sMap[key]);
+                } else { 
+                    let longestKeyLength = Math.max(...Object.keys(sMap).map(key => key.length));
+                    socialText.push(`${padKey(key, longestKeyLength)}\t${sMap[key]}`)
+                };
+            }
+        }
+
+        return socialText
+    }
+
+    var certifications = [
+    
+        
+            '---\n' +
+            '[[b;grey;]SSA - Server and System Systems Administration]\n' +
+            'December 2016\n' +
+            
+            'FreeBSD Brasil LTDA\n' +
+            
+            
+            '4773\n' +
+            
+            '\r',
+        
+            '---\n' +
+            '[[b;grey;]CLP - SUSE Certified Linux Professional - SLES 12]\n' +
+            'July 2016\n' +
+            
+            'Novell\n' +
+            
+            
+            '\r',
+        
+            '---\n' +
+            '[[b;grey;]CLA - SUSE Certified Linux Administrator Enterprise Server 11]\n' +
+            'January 2014\n' +
+            
+            'Novell\n' +
+            
+            
+            'CLA-LPIesclsb4xrv\n' +
+            
+            '\r',
+        
+            '---\n' +
+            '[[b;grey;]CompTIA Linux\u002b (Powered by LPI)]\n' +
+            'Jasnuary 2014\n' +
+            
+            'CompTIA\n' +
+            
+            
+            'DR6FJZPJ73E4S52H\n' +
+            
+            '\r',
+        
+            '---\n' +
+            '[[b;grey;]LPIC-1]\n' +
+            'January 2014\n' +
+            
+            'Linux Professional Institute (LPI)\n' +
+            
+            
+            'LPI000212084\n' +
+            
+            '\r',
+        
+    
+    ];
+    
+    var work = [
+    
+        
+            '---\n' +
+            '[[b;purple;]IT infrastructure analyst]\n' +
+            'Catarse.me\n' +
+            'somewhere\n' +
+            'January 2020 - Present\n' +
+            '\n' +
+            '• Supporting the technology team in automating and managing systems and troubleshooting and in scalability and agility of infrastructure.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Infrastructure Specialist]\n' +
+            'TCPIP Technology Solutions\n' +
+            'somewhere elese\n' +
+            'July 2016  - Present\n' +
+            '\n' +
+            '• TCPIP, my legal entity, was created to facilitate my freelance consultancy activities. • ITIL\/ITSM and Service Center • Rounting\u0026Swiching; • Virtualização VMware, vSphere, XenServer, QEMU-kVM, Libguestfs, Libvirt, virt-manager • IEEE 802.11 (Indoor\/Outdoor) • Integrações VoIP\/Asterisk • SysAdmin Linux, AIX, BSD e Windows; • Sistemas de arquivos distribuídos • Monitoramento Zabbix, Cacti, Prometheus, Netdata, Node_exporter, Grafana • Hardening de S.O. e Infra. like ABNT ISO\/IEC -27002 • POSIX1.e • Automação de infraestrutura Ansible, Terraform, Salt • Shell Bash, Bourne , C shell • NF\/IPTables, IPFW, PF, Proxy Cache, VPN IPSec\/OpenVPN .• DNS\/BIND, HTTP, NFS, NTP, DHCP • NIS • MySQL, PostgreSQL • Blade servers HP\/IBM\/Dell\/CISCO UCS; • Storage EMC\/IBM\/HP, SAN Multipath' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Datacenter Analyst]\n' +
+            'ArcelorMittal Sistemas\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'January 2019 - February 2020\n' +
+            '\n' +
+            '• Working in the Datacenter tower in automation, management, troubleshooting and infrastructure scalability and agility. Administration, support, debugging of infrastructure VMware ESXi 6 and IBM HMC clusters, Linux Suse\/Linux Power\/AIX systems, Pure Storages, Dell EMC VNX 5100,5200 \/ SCV3000, Hitach G200, COMMVAULT and TSM backup systems and Provisioning of Linux systems with SUSE Manager' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]IT infrastructure analyst]\n' +
+            'Startup Dados e Sistemas LTDA\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'January 2012 - July 2015\n' +
+            '\n' +
+            '• Network Infrastructure Consulting • Administration of virtual environments - VMWare 5\/6 and KVM Hypervisors • Installation, configuration and administration of production and mission-critical systems • Administration and support Red Hat Linux, Oracle Linux, Solaris and Windows Server 2003\/ 8 and 2012 R2 • Active Directory, Group Policies, RDS • Configuration and administration of Layer 3\/2 R\u0026S CiSCO\/HP\/Mikrotik network devices.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Unix analyst]\n' +
+            'Ativas Data Center SA\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'Janeiro 2012 - January 2014\n' +
+            '\n' +
+            '• installation, configuration and administration of production and mission-critical systems on Blade server HP\/IBM\/Dell, Storage EMC\/IBM\/HP, SAN Multipathing Brocade, Fiber channel, Backup Symantec, Network LAN\/VLAN\/Router and Swich Cisco; • Administration and support Red Hat Linux, Suse Linux, Solaris, AIX, HP-UX • Administration virtual environment Hypervisor VMWare 5\/6 • Red Hat Network Satellite - Management, provisioning, kickstart, monitoring; • Symantec Control Compliance Suite Vulnerability Manager handling vulnerabilities, risk and compliance.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Full Support Analyst]\n' +
+            'Fidens Engenharia S\/A\n' +
+            'Belo Horioznte, Minas Gerais - Brazil\n' +
+            'February 2011 - December 2011\n' +
+            '\n' +
+            '• Administration and implementation of Linux Network Servers; • SQUID proxy forward • IPTABLES firewall • Planning and execution of point-to-point and multipoint wireless networks; SMB\/CIFS • Full N2 Support.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Support Analyst]\n' +
+            'ARG Sucursal Africa\n' +
+            'Guiné Equatorial – África\n' +
+            'January 2010 - December 2010\n' +
+            '\n' +
+            '• Administration and implementation of Linux and W2K 2003 servers • DHCP; Active Directory; DNS Bind Linux; • SQUID proxy forward • IPTables firewall; • IBM Backup System Storage LTO • Planning and execution of point-to-point and multi-point wireless networks • User support.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Implementation technician]\n' +
+            'Fadepe - Fundação de Apoio e Desenvolvimento ao Ensino, Pesquisa e Extensão\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'November 2007 - January 2009\n' +
+            '\n' +
+            '• Execution of SIMADE project implementation processes; • Configuration of Linux networks in computer labs • Creation of Shell scripts to start specific processes • Configuration of LTSP servers - Linux Terminal Server Projec • Installation and configuration of SIMADE software in a network environment • Training of large classes of students (secretariats) • Certification of schools for each step of the implementation process of state educational institutions with SEE - MG Minas Gerais State Department of Education.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Support Analyst]\n' +
+            'Yamana Gold Inc.\n' +
+            'Maracá, Goias - Brazil\n' +
+            'January 2007 - June 2007\n' +
+            '\n' +
+            '• ICT infrastructure implementation project - Annex Irmãos HAAES • Implementation and training of specific software • Administration of W2k 2003 and Linux servers, Active Directory, DHCP and DNS • Planning and execution of point-to-point and multi-point wireless networks • User support.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Electronic Manager]\n' +
+            'Citi Brasil - Citigroup\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'August 2004 - March 2005\n' +
+            '\n' +
+            '• National project to implement CitiDirect electronic means for the Retail Banking\/CitiBusiness segment • Coordinator of implementation of the Belo Horizonte M.G. and Brasília D.F. squares • Study and parameterization of CNAB means and FEBRABAN rules • Approval of CitiDirect implementation processes • Monitoring and maintenance of CitiDirect electronic media.' +
+            '\r',
+        
+            '---\n' +
+            '[[b;purple;]Computer Technician]\n' +
+            'CRF Informática LTDA.\n' +
+            'Belo Horizonte, Minas Gerais - Brazil\n' +
+            'February 1999 - November 2003\n' +
+            '\n' +
+            '• Installation, configuration, maintenance and training of ECF – Fiscal Coupon Issuer - Visanet • EDI – Electronic Data Interchange by Interchange S.A • Training and user support • Maintenance on microcomputers.' +
+            '\r',
+        
+    
+    ];
+
+    var education = [
+    
+        
+            '---\n' +
+            '[[b;teal;]Philosophy]\n' +
+            'January 2000 - December 2004\n' +
+            
+                "Bachelor of Philosophy\n" +
+            
+            "\r",
+        
+    
+    ];
+
+    var projects = [
+    
+        
+            '---\n' +
+            '[[b;crimson;]Area31 Hackerspace - Minas Gerais - Brazil 🏴‍☠️]\n' +
+            'since 2013\n' +
+            'https:\/\/area31.net.br\n' +
+            
+            'founding member or almost founding member... :) but a member 💪! I also had the pleasure of being invited by the fearless friend @coffinix through the master @cybernetus to be a founding member (with the train already moving under the tracks…) of Area31 Hackerspace - Minas Gerais - Brazil.\n' +
+            
+            "\r",
+      
+            '---\n' +
+            '[[b;crimson;]CitiDirect]\n' +
+            'August 2004 - March 2005\n' +
+            'https:\/\/corporateportal.brazil.citibank.com\n' +
+            
+            'Coordinator of implementation in squares Belo Horizonte M.G. and Brasília D.F. of the National Project to implement CitiDirect electronic means for the Retail Banking\/CitiBusiness segment.\n' +
+            
+            "\r",
+      
+            '---\n' +
+            '[[b;crimson;]ECF – Fiscal Coupon Issuer]\n' +
+            'February 1999 - January 2001\n' +
+            'http:\/\/www.scopus.com.br\n' +
+            
+            'In partnership with Scopus Tecnologia SA, Belo Horizonte M.G, I worked as a technician implementing and training the Fiscal Coupon Issuer (ECF) equipment for an establishment that promotes retail sales and service providers. [CONFAZ](https:\/\/www.confaz.fazenda.gov.br\/legislacao\/convenios-ecf\/1998\/CVECF001_98) .\n' +
+            
+            "\r",
+      
+    
+    ];
+
+    var skills = [
+    
+        
+            '[[b;grey;]*BSD:]\n' +
+            progressBar( 85 ) +
+            '85' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Linux:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Network:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Hardware:]\n' +
+            progressBar( 85 ) +
+            '85' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Cloud computing:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Virtualization:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Troubleshooting:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Scripting:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            'Bash, Sh, ksh, tcsh\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Development:]\n' +
+            progressBar( 30 ) +
+            '30' + '%\n' +
+            
+            'Go\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Development:]\n' +
+            progressBar( 20 ) +
+            '20' + '%\n' +
+            
+            'C\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Development:]\n' +
+            progressBar( 10 ) +
+            '10' + '%\n' +
+            
+            'Python\n' +
+            
+            '\r',
+        
+            '[[b;grey;]IaC:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' +
+            
+            'Terraform, OpenTofu, Ansible, Testinfra, Packer, Git, DroneCI, Valt, Podman\n' +
+            
+            '\r',
+        
+    
+    ];
+
+    var softSkills = [
+    
+        
+            '[[b;grey;]Resilience:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' + 
+            
+            '\r',
+        
+            '[[b;grey;]Team-Work:]\n' +
+            progressBar( 85 ) +
+            '85' + '%\n' + 
+            
+            '\r',
+        
+            '[[b;grey;]Self-Motivated:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' + 
+            
+            '\r',
+        
+            '[[b;grey;]Leadership:]\n' +
+            progressBar( 80 ) +
+            '80' + '%\n' + 
+            
+            '\r',
+        
+            '[[b;grey;]Networking:]\n' +
+            progressBar( 90 ) +
+            '90' + '%\n' + 
+            
+            '\r',
+        
+    
+    ];
+  
+    var languages = [
+    
+        
+            '[[b;grey;]English:]\n' +
+            progressBar( 30 )+ 
+            '30' + '%\n' +
+            
+            '\r',
+        
+            '[[b;grey;]Spanish:]\n' +
+            progressBar( 50 )+ 
+            '50' + '%\n' +
+            
+            '\r',
+        
+    
+    ];
+
+    var misc = [
+         
+        '[[b;teal;]A little bit more about me]\n' +
+        '[[;grey;]\nDaily drivers\n----------------------------------------------------------\nFedora Linux    Ubuntu Linux  Rocky Linux   FreeBSD \nOpenBSD         netfilter     Vim           Tmux\nGitHub          GHActions     DroneCI       Ansible\nRedis           Zabbix        OpenTelemetry Terraform\nHUGO            OpenTofu      Bash          Go\nAWS             DigitalOcean  Cloudflare    Nginx\nDocker          Podman        Kubernetes    OpenVPN\nWireguard       Notion        Slack         Discord\nLinux KVM       Packer        Testinfra     Prometheus\nGrafana         Loki          Promtail      AlertManager\nNetdata         CAdvisor      Linkerd       NGINX\nCloudStack      IPFW          PF            SSH\n \nGood times gone by \n----------------------------------------------------------\nAIX             SUSE Linux    HP-UX         Cisco IOS\nAsterix         LTSP          SAMBA         LDAP\nWiFi PtP        Hitachi       Pure          EMC ECS\nSquid Proxy     Cacti         Nagios        Postfix\nQmail           DRBD          Linux-HA      WindowMaker\nWindow Maker    LVS           Keepalived    \n]\n',
+         
+    ];
+
+    var source =  '        _______            \n' +
+                  '       |       |           \n' +
+                  '       |       |           \n' +
+                  '       |_______|_______    \n' +
+                  '               |       |   \n' +
+                  '               |       |   \n' +
+                  ' ______________|_______|   \n' +
+                  '|      |       |       |   \n' +
+                  '|      |       |       |   \n' +
+                  '|______|_______|_______|   \n' +
+                  '[[;red;]May the source be with you]\n' +
+                  '[[;grey;]https://github.com/0xttfx\n' +
+                  '[[;grey;]Running on OpenBSD and httpd ]\n';
+
+    var all = [ 
+        whois,
+        social(),
+        work,
+        education,
+        skills,
+        softSkills,
+        languages,
+        projects,
+        certifications,
+        misc,
+        
+        
+        
+        source,
+        
+    ]
+
+    $('body').terminal(function(command, term) {
+
+        var useLess = false;
+        
+
+        function echoArray(array) {
+            if (useLess) {
+                term.less(array);
+            } else {
+                for (i = 0; i < array.length; i += 1) {
+                    term.echo(array[i]);
+                }
+            }
+        }
+        
+        function progress(percent, width) {
+            var size = Math.round(width*percent/100);
+            var left = '', taken = '', i;
+            for (i=size; i--;) {
+                taken += '=';
+            }
+            if (taken.length > 0) {
+                taken = taken.replace(/=$/, '>');
+            }
+            for (i=width-size; i--;) {
+                left += ' ';
+            }
+            return '[' + taken + left + '] ' + percent + '%';
+        }
+
+        function loading () {
+            var i = 0, size = 30;
+            prompt = term.get_prompt();
+            string = progress(0, size);
+            term.set_prompt(progress);
+            animation = true;
+            (function loop() {
+                string = progress(i++, size);
+                term.set_prompt(string);
+                if (i < 100) {
+                    timer = setTimeout(loop, 10);
+                } else {
+                    term.echo(progress(i, size) + ' [[b;green;]OK]').set_prompt(prompt);
+                    animation = false
+                }
+            })();
+        }
+
+        commands = command.split(/[ ]+/);
+        if (commands[0] == 'less') {
+            useLess = true;
+            commands.shift();
+        } 
+                    
+        switch(commands[0]) {
+            case 'whois':
+                
+                echoArray(whois);
+                break;
+            case 'social':
+                
+                echoArray(social());
+                break;
+            case 'work':
+                
+                echoArray(work);
+                break;
+            case 'education':
+                
+                echoArray(education);
+                break;
+            case 'skills':
+                
+                useLess = true;
+                
+                echoArray(skills);
+                break;
+            case 'softskills':
+                
+                echoArray(softSkills);
+                break;
+            case 'languages':
+                
+                echoArray(languages);
+                break;
+            case 'projects':
+                
+                echoArray(projects);
+                break;
+            case 'certifications':
+                
+                term.echo(certifications);
+                break;
+            case 'bitmore':
+                
+                echoArray(misc);
+                break;
+            case 'help':
+            case '?':
+                term.echo(help);
+                break;
+            case 'all':
+                
+                echoArray(all.flat(1));
+                break;
+            
+            case 'startx':
+                term.echo("loading ...");
+                loading();
+                setTimeout(function(){window.location = "https:\/\/0xttfx.tcpip.net.br"}, 2000);
+                break;
+            
+            case ':(){:|:&};:':
+                term.echo("nice try");
+                break;
+            case 'source':
+                
+                term.echo(source);
+                break;
+            
+            case 'exit':
+                term.echo("terminating ... ")
+                loading();
+                setTimeout(function(){window.location = 'about:blank'}, 2000);
+                break;
+            
+            
+            case 'version':
+                term.echo("2.0.0");
+                break;
+            
+            case '':
+                break;
+            default:
+                term.echo("\nunknown command: " + command + "\n" +
+                          "please type 'help' or '?' for a list of available commands\n");
+        }
+    }, {
+        prompt: '[[;green;]0xttfx@cv][[;green;]:~$]' + " ",
+        greetings: "[[b;white;]\nWelcome to the online CV of Thiago Faioli aka 0xttfx 🏴‍☠️\n\n• Type \u0027startx\u0027 to go to my homepage https:\/\/0xttfx.tcpip.net.br\n\n• Type \u0027help\u0027 for a list of commands...\n]",
+
+        keydown: function(e, term) {
+            if (animation) {
+                if (e.which == 68 && e.ctrlKey) { 
+                    clearTimeout(timer);
+                    animation = false;
+                    term.echo(string + ' [[b;red;]FAIL]')
+                    .set_prompt(prompt);
+                }
+                return false;
+            }
+        },
+        autocompleteMenu: true,
+        completion: Object.keys(commands)
+        
+    });
+});
+</script>
+
+        </body>
+</html>

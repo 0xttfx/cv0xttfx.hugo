@@ -1,0 +1,342 @@
+## Example Config file
+baseURL: "https://cv0xttfx.tcpip.net.br"
+theme: "terminalcv"
+title: "cv0xttfx"
+
+params:
+  version: '2.0.0'
+  description: "My terminal curriculo"
+  prompt: "0xttfx@cv"
+  promptColor: green
+  promptSimbols: ":~$"
+  promptSimbolsColor: green
+  startxLocation: https://0xttfx.tcpip.net.br
+  # useLess: true
+  exitLocation: 'about:blank'
+  source: true
+  greeting: | 
+
+    Welcome to the online CV of Thiago Faioli aka 0xttfx 🏴‍☠️
+
+    • Type 'startx' to go to my homepage https://0xttfx.tcpip.net.br
+
+    • Type 'help' for a list of commands...
+
+
+  whois: 
+    # settings:
+    #   useLess: true
+    details:
+      name: "Thiago Torres Faioli"
+      profession: "IT Infrastructure Consultante"
+      location: "Somewhere"
+      email: "thiago@tcpip.net.br"
+      homelink: "https://0xttfx.tcpip.net.br"
+      description: |
+              IT infrastructure, sysadmin unix and linux, cloud computing, platform engineer, {S,N}RE, cyber security, geek and hacker culture enthusiast.
+
+  social:
+    # settings:
+    #   useLess: true
+    #   hideName: true
+    details:
+    - name: "github"
+      url: "https://github.com/0xttfx"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/thiagofaioli"
+    - name: "X"
+      url: "https://twitter.com/0xttfx"
+    - name: "discord"
+      url: "https://discord.gg/jMztSAgJ"
+    - name: "telegram"
+      url: "https://t.me/0xttfx"
+    - name: "whatsapp"
+      url: "https://wa.me/5531984494065"
+
+  work:
+    # settings:
+    #   useLess: true
+    details:
+    - jobTitle: IT infrastructure analyst
+      color: purple
+      company: Catarse.me 
+      location: somewhere
+      date: January 2020 - Present
+      description: • Supporting the technology team in automating and managing systems and troubleshooting and in scalability and agility of infrastructure.
+
+    - jobTitle: Infrastructure Specialist
+      color: purple
+      company: TCPIP Technology Solutions
+      location: somewhere elese
+      date: July 2016  - Present
+      description: • TCPIP, my legal entity, was created to facilitate my freelance consultancy activities. • ITIL/ITSM and Service Center • Rounting&Swiching; • Virtualização VMware, vSphere, XenServer, QEMU-kVM, Libguestfs, Libvirt, virt-manager • IEEE 802.11 (Indoor/Outdoor) • Integrações VoIP/Asterisk • SysAdmin Linux, AIX, BSD e Windows; • Sistemas de arquivos distribuídos • Monitoramento Zabbix, Cacti, Prometheus, Netdata, Node_exporter, Grafana • Hardening de S.O. e Infra. like ABNT ISO/IEC -27002 • POSIX1.e • Automação de infraestrutura Ansible, Terraform, Salt • Shell Bash, Bourne , C shell • NF/IPTables, IPFW, PF, Proxy Cache, VPN IPSec/OpenVPN .• DNS/BIND, HTTP, NFS, NTP, DHCP • NIS • MySQL, PostgreSQL • Blade servers HP/IBM/Dell/CISCO UCS; • Storage EMC/IBM/HP, SAN Multipath
+
+    - jobTitle: Datacenter Analyst
+      color: 'purple' 
+      company: ArcelorMittal Sistemas
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: January 2019 - February 2020
+      description: • Working in the Datacenter tower in automation, management, troubleshooting and infrastructure scalability and agility. Administration, support, debugging of infrastructure VMware ESXi 6 and IBM HMC clusters, Linux Suse/Linux Power/AIX systems, Pure Storages, Dell EMC VNX 5100,5200 / SCV3000, Hitach G200, COMMVAULT and TSM backup systems and Provisioning of Linux systems with SUSE Manager
+
+    - jobTitle: IT infrastructure analyst
+      color: 'purple'
+      company: Startup Dados e Sistemas LTDA
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: January 2012 - July 2015
+      description: • Network Infrastructure Consulting • Administration of virtual environments - VMWare 5/6 and KVM Hypervisors • Installation, configuration and administration of production and mission-critical systems • Administration and support Red Hat Linux, Oracle Linux, Solaris and Windows Server 2003/ 8 and 2012 R2 • Active Directory, Group Policies, RDS • Configuration and administration of Layer 3/2 R&S CiSCO/HP/Mikrotik network devices.
+
+    - jobTitle: Unix analyst
+      color: 'purple'
+      company: Ativas Data Center SA
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: Janeiro 2012 - January 2014
+      description: • installation, configuration and administration of production and mission-critical systems on Blade server HP/IBM/Dell, Storage EMC/IBM/HP, SAN Multipathing Brocade, Fiber channel, Backup Symantec, Network LAN/VLAN/Router and Swich Cisco; • Administration and support Red Hat Linux, Suse Linux, Solaris, AIX, HP-UX • Administration virtual environment Hypervisor VMWare 5/6 • Red Hat Network Satellite - Management, provisioning, kickstart, monitoring; • Symantec Control Compliance Suite Vulnerability Manager handling vulnerabilities, risk and compliance.
+
+    - jobTitle: Full Support Analyst
+      color: 'purple'
+      company: Fidens Engenharia S/A 
+      location: Belo Horioznte, Minas Gerais - Brazil
+      date: February 2011 - December 2011
+      description: • Administration and implementation of Linux Network Servers; • SQUID proxy forward • IPTABLES firewall • Planning and execution of point-to-point and multipoint wireless networks; SMB/CIFS • Full N2 Support.
+
+    - jobTitle: Support Analyst
+      color: 'purple'  
+      company: ARG Sucursal Africa 
+      location: Guiné Equatorial – África
+      date: January 2010 - December 2010
+      description: • Administration and implementation of Linux and W2K 2003 servers • DHCP; Active Directory; DNS Bind Linux; • SQUID proxy forward • IPTables firewall; • IBM Backup System Storage LTO • Planning and execution of point-to-point and multi-point wireless networks • User support.
+
+    - jobTitle: Implementation technician
+      color: 'purple'
+      company: Fadepe - Fundação de Apoio e Desenvolvimento ao Ensino, Pesquisa e Extensão 
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: November 2007 - January 2009
+      description: • Execution of SIMADE project implementation processes; • Configuration of Linux networks in computer labs • Creation of Shell scripts to start specific processes • Configuration of LTSP servers - Linux Terminal Server Projec • Installation and configuration of SIMADE software in a network environment • Training of large classes of students (secretariats) • Certification of schools for each step of the implementation process of state educational institutions with SEE - MG Minas Gerais State Department of Education.
+
+    - jobTitle: Support Analyst
+      color: 'purple'
+      company: Yamana Gold Inc. 
+      location: Maracá, Goias - Brazil
+      date: January 2007 - June 2007
+      description: • ICT infrastructure implementation project - Annex Irmãos HAAES • Implementation and training of specific software • Administration of W2k 2003 and Linux servers, Active Directory, DHCP and DNS • Planning and execution of point-to-point and multi-point wireless networks • User support.
+
+    - jobTitle: Electronic Manager
+      color: 'purple'
+      company: Citi Brasil - Citigroup
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: August 2004 - March 2005
+      description: • National project to implement CitiDirect electronic means for the Retail Banking/CitiBusiness segment • Coordinator of implementation of the Belo Horizonte M.G. and Brasília D.F. squares • Study and parameterization of CNAB means and FEBRABAN rules • Approval of CitiDirect implementation processes • Monitoring and maintenance of CitiDirect electronic media.
+
+    - jobTitle: Computer Technician
+      color: 'purple'
+      company: CRF Informática LTDA. 
+      location: Belo Horizonte, Minas Gerais - Brazil
+      date: February 1999 - November 2003
+      description: • Installation, configuration, maintenance and training of ECF – Fiscal Coupon Issuer - Visanet • EDI – Electronic Data Interchange by Interchange S.A • Training and user support • Maintenance on microcomputers.
+
+
+  education:
+    details:
+    - courseName: Philosophy
+      color: 'teal'
+      date: January 2000 - December 2004
+      description: Bachelor of Philosophy
+
+  skills:
+    settings:
+      useLess: true
+    details:
+    - name: '*BSD'
+      #color: 
+      percentage: 85
+      #Description: you can add a description
+
+    - name: Linux 
+      #color: 
+      percentage: 90
+      #description: or you can leave it comented   
+
+    - name: Network
+      #color: blue
+      percentage: 90
+      #description: Skill names can have colors too
+    
+    - name: Hardware
+      #color: blue
+      percentage: 85
+      #description: Skill names can have colors too
+
+    - name: Cloud computing
+      #color: blue
+      percentage: 90
+      #description: Skill names can have colors too
+
+    - name: Virtualization
+      #color: blue
+      percentage: 90
+      #description: Skill names can have colors too
+
+    - name: Troubleshooting
+      #color: blue
+      percentage: 90
+      #description: Skill names can have colors too
+
+    - name: Scripting
+      #color: blue
+      percentage: 90
+      description: Bash, Sh, ksh, tcsh
+
+    - name: Development
+      #color: blue
+      percentage: 30
+      description: Go
+
+    - name: Development
+      #color: blue
+      percentage: 20
+      description: C
+
+    - name: Development
+      #color: blue
+      percentage: 10
+      description: Python
+
+    - name: IaC
+      #color: blue
+      percentage: 90
+      description: Terraform, OpenTofu, Ansible, Testinfra, Packer, Git, DroneCI, Valt, Podman
+
+
+
+
+  softskills:
+    # settings:
+    #   useLess: true
+    details:
+    - name: Resilience
+      #color: red
+      percentage: 90
+      #description:
+
+    - name: Team-Work
+      #color: 
+      percentage: 85
+      #description: Description
+
+    - name: Self-Motivated
+      #color: 
+      percentage: 90
+      #description: Description
+
+    - name: Leadership
+      #color: 
+      percentage: 80
+      #description: Description
+
+    - name: Networking
+      #color: 
+      percentage: 90
+      #description: Description
+
+
+  languages:
+    # settings:
+    #   useLess: true
+    details:
+    - name: English
+      #color: Blue
+      percentage: 30
+      #description: 
+
+    - name: Spanish
+      #color: 'crimson'
+      percentage: 50
+      #description: 
+
+
+  projects:
+    # settings:
+    #   useLess: true
+    details:
+    - title: Area31 Hackerspace - Minas Gerais - Brazil 🏴‍☠️
+      color: crimson
+      date: since 2013
+      link: https://area31.net.br
+      description: founding member or almost founding member... :) but a member 💪! I also had the pleasure of being invited by the fearless friend @coffinix through the master @cybernetus to be a founding member (with the train already moving under the tracks…) of Area31 Hackerspace - Minas Gerais - Brazil.
+
+    - title: CitiDirect 
+      color: crimson
+      date: August 2004 - March 2005 
+      link: https://corporateportal.brazil.citibank.com
+      description: Coordinator of implementation in squares Belo Horizonte M.G. and Brasília D.F. of the National Project to implement CitiDirect electronic means for the Retail Banking/CitiBusiness segment.
+
+    - title: ECF – Fiscal Coupon Issuer
+      color: crimson
+      date: February 1999 - January 2001
+      link: http://www.scopus.com.br
+      description: In partnership with Scopus Tecnologia SA, Belo Horizonte M.G, I worked as a technician implementing and training the Fiscal Coupon Issuer (ECF) equipment for an establishment that promotes retail sales and service providers. [CONFAZ](https://www.confaz.fazenda.gov.br/legislacao/convenios-ecf/1998/CVECF001_98) .
+
+
+  certifications:
+    # settings:
+    #   useLess: true
+    details:
+    - certName: SSA - Server and System Systems Administration
+      company: FreeBSD Brasil LTDA
+      date: December 2016
+      description: 011245
+
+    - certName: CLP - SUSE Certified Linux Professional - SLES 12
+      company: Novell
+      date: July 2016
+      description: 
+
+    - certName: CLA - SUSE Certified Linux Administrator Enterprise Server 11
+      company: Novell
+      date: January 2014
+      description: CLA-LPIesclsb4xrv
+
+    - certName: CompTIA Linux+ (Powered by LPI)
+      company: CompTIA
+      date: Jasnuary 2014
+      description: DR6FJZPJ73E4S52H
+
+    - certName: LPIC-1
+      company: Linux Professional Institute (LPI)
+      date: January 2014
+      description: LPI000212084
+
+  
+  misc: 
+    # settings:
+    #   useLess: true
+    commandName: bitmore
+    title: "A little bit more about me"
+    titleColor: teal
+    content: |
+          
+          Daily drivers
+          ----------------------------------------------------------
+          Fedora Linux    Ubuntu Linux  Rocky Linux   FreeBSD 
+          OpenBSD         netfilter     Vim           Tmux
+          GitHub          GHActions     DroneCI       Ansible
+          Redis           Zabbix        OpenTelemetry Terraform
+          HUGO            OpenTofu      Bash          Go
+          AWS             DigitalOcean  Cloudflare    Nginx
+          Docker          Podman        Kubernetes    OpenVPN
+          Wireguard       Notion        Slack         Discord
+          Linux KVM       Packer        Testinfra     Prometheus
+          Grafana         Loki          Promtail      AlertManager
+          Netdata         CAdvisor      Linkerd       NGINX
+          CloudStack      IPFW          PF            SSH
+           
+          Good times gone by 
+          ----------------------------------------------------------
+          AIX             SUSE Linux    HP-UX         Cisco IOS
+          Asterix         LTSP          SAMBA         LDAP
+          WiFi PtP        Hitachi       Pure          EMC ECS
+          Squid Proxy     Cacti         Nagios        Postfix
+          Qmail           DRBD          Linux-HA      WindowMaker
+          Window Maker    LVS           Keepalived    
+
+    contentColor: grey
